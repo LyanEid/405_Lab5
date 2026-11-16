@@ -182,3 +182,228 @@ footer p {
     flex-direction: column;
   }
 }
+
+
+/* ===== Lab 5: Interactive features ===== */
+
+/* Task 2: hidden extra About content */
+.hidden {
+  display: none;
+}
+
+/* Header buttons (theme + print) */
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.action-btn {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d47a1;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid #bbdefb;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #64b5f6;
+  color: #1c2b3a;
+}
+
+/* Show More button sits inside a white section */
+.light-btn {
+  background-color: #e3f2fd;
+  border-color: #90caf9;
+  margin-top: 8px;
+}
+
+.light-btn:hover {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+/* Task 4: filter buttons */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 4px;
+}
+
+.filter-btn {
+  font-family: inherit;
+  font-weight: 600;
+  color: #0d47a1;
+  background-color: #e3f2fd;
+  padding: 8px 18px;
+  border: 1px solid #90caf9;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #bbdefb;
+}
+
+.filter-btn.active {
+  background-color: #1976d2;
+  border-color: #1976d2;
+  color: #ffffff;
+}
+
+/* Task 1: dark mode (toggled on <body>) */
+body.dark-mode {
+  color: #e3ecf6;
+  background-color: #0f1923;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode #profile-header {
+  background-color: #0a1929;
+  border-bottom-color: #1976d2;
+}
+
+body.dark-mode nav a {
+  color: #ffffff;
+}
+
+body.dark-mode .cv-section {
+  background-color: #17232f;
+  border-color: #2a3b4d;
+  border-left-color: #64b5f6;
+}
+
+body.dark-mode .cv-section h2 {
+  color: #90caf9;
+  border-bottom-color: #2a3b4d;
+}
+
+body.dark-mode .education-item h3 {
+  color: #64b5f6;
+}
+
+body.dark-mode .skills-list li {
+  background-color: #1d3347;
+  color: #bbdefb;
+  border-color: #2f5a80;
+}
+
+body.dark-mode .skills-list li:hover {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+body.dark-mode .project-card {
+  background-color: #1d2c3b;
+  border-color: #2a3b4d;
+}
+
+body.dark-mode .project-card:hover {
+  border-color: #64b5f6;
+}
+
+body.dark-mode .light-btn,
+body.dark-mode .filter-btn {
+  background-color: #1d3347;
+  color: #bbdefb;
+  border-color: #2f5a80;
+}
+
+body.dark-mode .filter-btn.active {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  background-color: #0a1929;
+}
+
+/* Task 5: print styles */
+@media print {
+  /* Hide interactive controls */
+  .header-actions,
+  nav,
+  .filter-bar,
+  #about-toggle {
+    display: none !important;
+  }
+
+  /* Always print the full About text */
+  #about-more.hidden {
+    display: block;
+  }
+
+  /* Force a clean light look, even if dark mode is on */
+  body,
+  body.dark-mode {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  #profile-header,
+  body.dark-mode #profile-header {
+    background: #ffffff;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    padding: 10px 0;
+  }
+
+  .job-title {
+    color: #333333;
+  }
+
+  .cv-container {
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .cv-section,
+  body.dark-mode .cv-section,
+  .project-card,
+  body.dark-mode .project-card {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #999999;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  .cv-section h2,
+  body.dark-mode .cv-section h2,
+  .education-item h3,
+  body.dark-mode .education-item h3 {
+    color: #000000;
+  }
+
+  .skills-list li,
+  body.dark-mode .skills-list li {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #666666;
+  }
+
+  a,
+  body.dark-mode a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  footer,
+  body.dark-mode footer {
+    background: #ffffff;
+    color: #000000;
+    border-top: 1px solid #999999;
+  }
+}
