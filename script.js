@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   themeBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
     const isDark = document.body.classList.contains("dark-mode");
+    document.documentElement.classList.toggle("dark-mode", isDark);
     themeBtn.textContent = isDark ? "\u2600 Light Mode" : "\u263E Dark Mode";
   });
 
@@ -72,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.className = "project-card";
 
       const badge = document.createElement("span");
-      badge.className = "badge";
+      badge.className = "badge badge-" + project.category.toLowerCase();
       badge.textContent = project.category;
 
       const title = document.createElement("h3");
