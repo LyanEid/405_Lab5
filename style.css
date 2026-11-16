@@ -1,0 +1,184 @@
+/* ===== Lab 3: CV styling ===== */
+
+/* Element selector: base page styles (font, background, margin, padding) */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1c2b3a;
+  background-color: #eaf1f8;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0 0 10px;
+}
+
+a {
+  color: #1565c0;
+  text-decoration: none;
+}
+
+/* Hover effect for all links */
+a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+/* ID selector: page header */
+#profile-header {
+  background-color: #0d47a1;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px 20px;
+  border-bottom: 6px solid #64b5f6;
+}
+
+#profile-header h1 {
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+
+/* Class selector */
+.job-title {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #bbdefb;
+  margin: 0 0 20px;
+}
+
+/* Descendant selector: links inside the nav */
+nav a {
+  display: inline-block;
+  color: #ffffff;
+  margin: 4px 6px;
+  padding: 8px 16px;
+  border: 1px solid #bbdefb;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background-color: #64b5f6;
+  border-color: #64b5f6;
+  color: #1c2b3a;
+  text-decoration: none;
+}
+
+/* Main container */
+.cv-container {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* CV sections */
+.cv-section {
+  background-color: #ffffff;
+  margin-bottom: 24px;
+  padding: 24px 28px;
+  border: 1px solid #cfdbe8;
+  border-left: 6px solid #1976d2;
+  border-radius: 6px;
+}
+
+.cv-section h2 {
+  color: #0d47a1;
+  border-bottom: 2px solid #e3ecf6;
+  padding-bottom: 8px;
+}
+
+/* Education */
+.education-item {
+  margin-top: 12px;
+}
+
+.education-item h3 {
+  color: #1976d2;
+}
+
+.education-item p {
+  margin: 2px 0;
+}
+
+/* Skills list */
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 8px 16px;
+  border: 1px solid #90caf9;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.skills-list li:hover {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+/* Project card */
+.project-card {
+  background-color: #f7fafd;
+  margin-top: 12px;
+  padding: 16px 20px;
+  border: 1px solid #b6c9de;
+  border-radius: 6px;
+}
+
+.project-card:hover {
+  border-color: #1976d2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project-card a {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #0d2a4a;
+  color: #c5d6e8;
+  text-align: center;
+  padding: 16px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media query: smaller screens */
+@media (max-width: 600px) {
+  #profile-header h1 {
+    font-size: 1.9rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px auto;
+    max-width: 220px;
+  }
+
+  .cv-container {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
+
+  .cv-section {
+    padding: 16px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+  }
+}

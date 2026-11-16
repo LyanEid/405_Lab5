@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyan Al-blwei - CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="profile-header">
+        <div class="header-actions">
+            <button id="theme-toggle" class="action-btn" type="button">Dark Mode</button>
+            <button id="print-btn" class="action-btn" type="button">Print / Save as PDF</button>
+        </div>
+
+        <h1>Lyan Al-blwei</h1>
+        <p class="job-title">Information Technology Student</p>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="cv-container">
+
+        <section id="about" class="cv-section">
+            <h2>About Me</h2>
+            <p>
+                I am an Information Technology student at King Abdulaziz University with a
+                strong interest in cybersecurity and digital forensics.
+            </p>
+            <div id="about-more" class="hidden">
+                <p>
+                    I am currently studying for my Security+ certification and working on my
+                    senior project. I have experience building software systems with Java,
+                    Python, and SQL, and I enjoy designing user-friendly interfaces in Figma.
+                </p>
+            </div>
+            <button id="about-toggle" class="action-btn light-btn" type="button">Show More</button>
+        </section>
+
+        <section id="education" class="cv-section">
+            <h2>Education</h2>
+
+            <article class="education-item">
+                <h3>King Abdulaziz University</h3>
+                <p>Bachelor of Information Technology</p>
+                <p>2022 &ndash; Present</p>
+            </article>
+
+            <article class="education-item">
+                <h3>IBM Cybersecurity Analyst</h3>
+                <p>Professional Certificate, IBM &middot; Coursera</p>
+                <p>Completed: December 2024</p>
+            </article>
+        </section>
+
+        <section id="skills" class="cv-section">
+            <h2>Skills</h2>
+
+            <ul class="skills-list">
+                <li>Cybersecurity</li>
+                <li>Digital Forensics</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Linux</li>
+                <li>Networking</li>
+                <li>System Analysis</li>
+                <li>UI/UX Design</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="cv-section">
+            <h2>Projects</h2>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" type="button" data-category="All">All</button>
+                <button class="filter-btn" type="button" data-category="Web">Web</button>
+                <button class="filter-btn" type="button" data-category="Programming">Programming</button>
+            </div>
+
+            <div id="projects-container"></div>
+        </section>
+
+        <section id="contact" class="cv-section">
+            <h2>Contact</h2>
+
+            <p>
+                Email:
+                <a href="mailto:LyanAlblwei@outlook.com">LyanAlblwei@outlook.com</a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/LyanEid">github.com/LyanEid</a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/layan-albalwei-321164202/">Lyan Al-blwei</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lyan Al-blwei</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
